@@ -1,0 +1,71 @@
+body{
+    background-image:linear-gradient(red, crimson);
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+body::after{
+    content: "";
+    position:absolute;
+    top: -50;
+    left: -30;
+    width: 150%;
+    height: 100%;
+    background-image: url("/images/pink.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    z-index: 1;
+    opacity: 0.3;
+}
+.scene{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+
+}
+h1{
+    font-family: monospace;
+    font-size: 60;
+    z-index: 3;
+
+}
+.back-ground {
+    position: absolute; 
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    opacity: .3;
+    z-index: -3;
+}
+.rose{
+    transition: all ease 1s;
+    box-shadow: 0px 0px 10px white;
+    border-radius: none;
+}
+.rose:hover{
+    transform: scale(105%);
+    border-radius: 50%;
+}
+.rose:active{
+    animation: animation 2s ease-in-out none infinite;
+}
+.happy,
+.day,
+.mom{
+    transition: all ease 0.25s;
+    color: antiquewhite;
+    text-shadow: 5px 10px 10px red;
+}
+
+
+@keyframes animation {
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
